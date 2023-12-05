@@ -1,0 +1,50 @@
+1- create the buttons
+2- design and layout
+
+
+game data:
+- create an object that stores 
+
+array of 
+
+color object {
+
+    [
+        {
+            color: pink
+            matcher: yes
+
+        },
+        {
+            color: purple
+            matcher: no
+        },
+        {
+            color: green
+            matcher: no
+        }
+
+    ]
+
+    [
+        {
+            color: pink
+            matcher: yes
+
+        },
+        {
+            color: purple
+            matcher: no
+        },
+        {
+            color: green
+            matcher: no
+        }
+
+    ]
+
+}
+
+
+
+im currently storing the data inside of the file but in the future I want to refactor the code to create a function that generates the colors
