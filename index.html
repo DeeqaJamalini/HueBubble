@@ -7,26 +7,39 @@
     <title>HueBubble Game</title>
   </head>
   <body>
-    <script type="module" src="/src/main.ts"></script>
+    <h1 id="header">HueBubble</h1>
 
     <section class="Game">
-      <div id="color-matcher"></div>
-      <div class="color-buttons">
-        <button id="button1"></button>
-        <button id="button2"></button>
-        <button id="button3"></button>
-        <button id="button4"></button>
-        <button id="button5"></button>
-        <button id="button6"></button>
-        <button id="button7"></button>
-        <button id="button8"></button>
-        <button id="button9"></button>
-        <button id="button10"></button>
+      <div class="color-matcher">
+        <p class="color-matcher__text">Matcher</p>
+
+        <button class="color-matcher__color" id="matcher"></button>
+      </div>
+      <div class="user-selection">
+        <p class="user-selection__text">
+          Click the button that matches the matcher
+        </p>
+
+        <div class="user-selection__buttons">
+          <button id="button1"></button>
+          <button id="button2"></button>
+          <button id="button3"></button>
+          <button id="button4"></button>
+          <button id="button5"></button>
+          <button id="button6"></button>
+          <button id="button7"></button>
+          <button id="button8"></button>
+          <button id="button9"></button>
+          <button id="button10"></button>
+        
+          
+        </div>
       </div>
       <div class="game-option-buttons">
         <button id="restart-button"></button>
         <button id="end-game-button"></button>
       </div>
     </section>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
