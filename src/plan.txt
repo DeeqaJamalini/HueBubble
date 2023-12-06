@@ -1,6 +1,8 @@
 1- create the buttons
 2- design and layout
 3- add typescript to everything
+4- get rid of css files its not need as sass is a dev dependency
+
 
 
 game data:
