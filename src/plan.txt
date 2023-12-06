@@ -1,5 +1,6 @@
 1- create the buttons
 2- design and layout
+3- add typescript to everything
 
 
 game data:
@@ -48,3 +49,6 @@ color object {
 
 
 im currently storing the data inside of the file but in the future I want to refactor the code to create a function that generates the colors
+
+
+//create a function that keeps track of the games playes and the score of ones correct if you have time
