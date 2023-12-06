@@ -14,11 +14,13 @@ const button7 = document.querySelector<HTMLButtonElement>("#button7");
 const button8 = document.querySelector<HTMLButtonElement>("#button8");
 const button9 = document.querySelector<HTMLButtonElement>("#button9");
 const button10 = document.querySelector<HTMLButtonElement>("#button10");
-const nextButton = document.querySelector<HTMLButtonElement>("#next-button");
+const startButton = document.querySelector<HTMLButtonElement>("#start-button");
 const instructions =
   document.querySelector<HTMLParagraphElement>("#instructions");
 const restartButton =
   document.querySelector<HTMLButtonElement>("#restart-button");
+const scoreCounter =
+  document.querySelector<HTMLParagraphElement>("#score-counter");
 
 if (
   !matcher ||
@@ -32,20 +34,19 @@ if (
   !button8 ||
   !button9 ||
   !button10 ||
-  !nextButton ||
+  !startButton ||
   !instructions ||
   !restartButton
 ) {
-  throw new Error("Something is wrong with your HTML buttons");
+  throw new Error("Something is wrong with my HTML buttons");
 }
 
-//create the function to change the color of the buttons where one button matches the matcher button
-
 let level = 0;
+let score = 0;
+
+let isClickable = true;
 
 const game = () => {
-  //change the background-color of the matcher to the
-
   matcher.style.backgroundColor =
     allBeginnerLevels[level].matcherButton["matcher-button"];
   button1.style.backgroundColor =
@@ -68,34 +69,49 @@ const game = () => {
     allBeginnerLevels[level].colorButtons[8].color;
   button10.style.backgroundColor =
     allBeginnerLevels[level].colorButtons[9].color;
+  isClickable = true;
+};
+
+const updateScore = () => {
+  if (scoreCounter) {
+    scoreCounter.textContent = `Score: ${score}`;
+  }
 };
 
 const validateAnswer = (buttonIndex: number) => {
+  if (!isClickable) {
+    return;
+  }
   const isMatch = allBeginnerLevels[level].colorButtons[buttonIndex].matcher;
   if (isMatch) {
     alert("Correct! You matched the button!");
-    // Add logic for what happens when the answer is correct
+    score++;
+    updateScore();
+    level++;
+    if (level < allBeginnerLevels.length) {
+      game();
+    } else {
+      alert("Congratulations! You completed all levels.");
+    }
   } else {
     alert("Incorrect! Try again.");
-    // Add logic for what happens when the answer is incorrect
   }
 };
 
 const restartGame = () => {
   level = 0;
+  score = 0;
+  updateScore();
   game();
 };
 
-const nextGame = () => {
-  level++;
-  if (level < allBeginnerLevels.length) {
-    game();
-  } else {
-    alert("Congratulations! You completed all levels.");
-  }
+const startGame = () => {
+  level = 0;
+  score = 0;
+  updateScore();
+  isClickable = true;
+  game();
 };
-
-const levelCounter = () => {};
 
 button1.addEventListener("click", () => validateAnswer(0));
 button2.addEventListener("click", () => validateAnswer(1));
@@ -108,12 +124,5 @@ button8.addEventListener("click", () => validateAnswer(7));
 button9.addEventListener("click", () => validateAnswer(8));
 button10.addEventListener("click", () => validateAnswer(9));
 
-nextButton.addEventListener("click", nextGame);
+startButton.addEventListener("click", startGame);
 restartButton.addEventListener("click", restartGame);
-
-//if the user clicks the button that matches the matcher they get a message that the answer is correct
-//when the user clicks any of the buttons that do not match the matcher the user gets a message that the answer is incorrect
-
-//create the function that validates the user input to see if they picked the right color
-
-//create the function that clicks next game
