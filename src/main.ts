@@ -1,88 +1,42 @@
 import "./styles/main.css";
 import { allBeginnerLevels } from "./colors/all-levels";
 
-//get all the buttons html
-
+const buttons = Array.from(document.querySelectorAll('.button'));
 const matcher = document.querySelector<HTMLButtonElement>("#matcher");
-const button1 = document.querySelector<HTMLButtonElement>("#button1");
-const button2 = document.querySelector<HTMLButtonElement>("#button2");
-const button3 = document.querySelector<HTMLButtonElement>("#button3");
-const button4 = document.querySelector<HTMLButtonElement>("#button4");
-const button5 = document.querySelector<HTMLButtonElement>("#button5");
-const button6 = document.querySelector<HTMLButtonElement>("#button6");
-const button7 = document.querySelector<HTMLButtonElement>("#button7");
-const button8 = document.querySelector<HTMLButtonElement>("#button8");
-const button9 = document.querySelector<HTMLButtonElement>("#button9");
-const button10 = document.querySelector<HTMLButtonElement>("#button10");
-const startButton = document.querySelector<HTMLButtonElement>("#start-button");
-const instructions =
-  document.querySelector<HTMLParagraphElement>("#instructions");
-const restartButton =
-  document.querySelector<HTMLButtonElement>("#restart-button");
-const scoreCounter =
-  document.querySelector<HTMLParagraphElement>("#score-counter");
+const gameButton = document.querySelector<HTMLButtonElement>("#game-button");
+const instructions = document.querySelector<HTMLParagraphElement>("#instructions");
+const scoreCounter = document.querySelector<HTMLParagraphElement>("#score-counter");
 
-if (
-  !matcher ||
-  !button1 ||
-  !button2 ||
-  !button3 ||
-  !button4 ||
-  !button5 ||
-  !button6 ||
-  !button7 ||
-  !button8 ||
-  !button9 ||
-  !button10 ||
-  !startButton ||
-  !instructions ||
-  !restartButton
-) {
-  throw new Error("Something is wrong with my HTML buttons");
+if (!matcher || !gameButton || !instructions || !scoreCounter || buttons.length !== 10) {
+  throw new Error("Something is wrong with my HTML elements");
 }
 
 let level = 0;
 let score = 0;
-
-let isClickable = true;
+let isClickable = false;
 
 const game = () => {
-  matcher.style.backgroundColor =
-    allBeginnerLevels[level].matcherButton["matcher-button"];
-  button1.style.backgroundColor =
-    allBeginnerLevels[level].colorButtons[0].color;
-  button2.style.backgroundColor =
-    allBeginnerLevels[level].colorButtons[1].color;
-  button3.style.backgroundColor =
-    allBeginnerLevels[level].colorButtons[2].color;
-  button4.style.backgroundColor =
-    allBeginnerLevels[level].colorButtons[3].color;
-  button5.style.backgroundColor =
-    allBeginnerLevels[level].colorButtons[4].color;
-  button6.style.backgroundColor =
-    allBeginnerLevels[level].colorButtons[5].color;
-  button7.style.backgroundColor =
-    allBeginnerLevels[level].colorButtons[6].color;
-  button8.style.backgroundColor =
-    allBeginnerLevels[level].colorButtons[7].color;
-  button9.style.backgroundColor =
-    allBeginnerLevels[level].colorButtons[8].color;
-  button10.style.backgroundColor =
-    allBeginnerLevels[level].colorButtons[9].color;
+  const levelData = allBeginnerLevels[level];
+  matcher.style.backgroundColor = levelData.matcherButton["matcher-button"];
+  buttons.forEach((button, index) => {
+    (button as HTMLButtonElement).style.backgroundColor = levelData.colorButtons[index].color;
+  });
   isClickable = true;
+  gameButton.textContent = "Restart";
 };
 
 const updateScore = () => {
-  if (scoreCounter) {
-    scoreCounter.textContent = `Score: ${score}`;
-  }
+  (scoreCounter as HTMLParagraphElement).textContent = `Score: ${score}/100`;
+
 };
 
 const validateAnswer = (buttonIndex: number) => {
   if (!isClickable) {
     return;
   }
+
   const isMatch = allBeginnerLevels[level].colorButtons[buttonIndex].matcher;
+
   if (isMatch) {
     alert("Correct! You matched the button!");
     score++;
@@ -95,6 +49,14 @@ const validateAnswer = (buttonIndex: number) => {
     }
   } else {
     alert("Incorrect! Try again.");
+  }
+};
+
+const toggleGame = () => {
+  if (level === 0) {
+    startGame();
+  } else {
+    restartGame();
   }
 };
 
@@ -111,18 +73,11 @@ const startGame = () => {
   updateScore();
   isClickable = true;
   game();
+  gameButton.textContent = "Restart";
 };
 
-button1.addEventListener("click", () => validateAnswer(0));
-button2.addEventListener("click", () => validateAnswer(1));
-button3.addEventListener("click", () => validateAnswer(2));
-button4.addEventListener("click", () => validateAnswer(3));
-button5.addEventListener("click", () => validateAnswer(4));
-button6.addEventListener("click", () => validateAnswer(5));
-button7.addEventListener("click", () => validateAnswer(6));
-button8.addEventListener("click", () => validateAnswer(7));
-button9.addEventListener("click", () => validateAnswer(8));
-button10.addEventListener("click", () => validateAnswer(9));
+buttons.forEach((button, index) => {
+  button.addEventListener("click", () => validateAnswer(index));
+});
 
-startButton.addEventListener("click", startGame);
-restartButton.addEventListener("click", restartGame);
+gameButton.addEventListener("click", toggleGame);

@@ -1,6 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium&display=swap");
+.button {
+  border: none;
+  border-color: green;
+}
+
+.matcher {
+  border: none;
+}
+
+body {
+  background-image: linear-gradient(to right top, #ffd1eb, #f1c7eb, #dfbeeb, #cab7ec, #b0b0eb, #a3b4ed, #96b8ec, #8bbbea, #97c8ea, #a8d4e9, #bddeea, #d4e8ec);
+}
+
 #header {
   display: flex;
   justify-content: center;
+  font-family: "Oxanium", sans-serif;
+  color: white;
 }
 
 .color-matcher {
@@ -9,11 +27,19 @@
   align-items: center;
   height: 100px;
   width: 100%;
+  font-family: "Oxanium", sans-serif;
+  color: white;
 }
 .color-matcher__color {
   border-radius: 50%;
   height: 80px;
   width: 80px;
+  border: none;
+}
+
+.user-selection {
+  font-family: "Oxanium", sans-serif;
+  color: white;
 }
 
 .game-option-buttons {
@@ -25,9 +51,12 @@
   width: 100%;
 }
 .game-option-buttons #restart-button {
-  align-self: center;
+  flex-direction: column;
+  justify-content: flex-end;
   height: 50px;
   width: 100px;
+  margin-top: 100px;
+  padding-top: 10px;
 }
 .game-option-buttons #end-game-button {
   align-self: center;
@@ -42,9 +71,10 @@
 }
 .user-selection__buttons {
   display: grid;
-  height: 600px;
+  height: 500px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
 }
 .user-selection__buttons #button1 {
   grid-column: 2/3;
