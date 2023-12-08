@@ -1,7 +1,16 @@
 //change the background of the whole site to the minth green color
 
+
 body {
   background-image: linear-gradient(to right top, #ffd1eb, #f1c7eb, #dfbeeb, #cab7ec, #b0b0eb, #a3b4ed, #96b8ec, #8bbbea, #97c8ea, #a8d4e9, #bddeea, #d4e8ec);
+}
+
+#score-counter {
+  display: flex;
+  justify-content: start;
+
+  font-family: "Oxanium", sans-serif;
+  color: white;
 }
 
 #header {
@@ -34,45 +43,45 @@ body {
   
 }
 
-.game-option-buttons {
-  display: flex;
-  flex-direction: row; /* Set to row for a horizontal layout */
-  gap: 10px;
-  justify-content: center; /* Center items along the main axis */
-  align-items: center;
-  width: 100%;
 
-  #restart-button {
-    flex-direction: column;
-    justify-content: flex-end;
+  #game-button {
+    background-color: #B8E2C8;
+    border-style: none;
+    border-radius: 10px;
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     width: 100px;
-    margin-top: 100px;
+    margin-top: 20px;
     padding-top: 10px;  
     
 
   }
 
-  #end-game-button {
-    align-self: center;
-    height: 50px;
-    width: 100px;
-  }
-}
+
 
 .user-selection {
-  // format this to be shorter later
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &__buttons {
+
+    background-color: white;
+    padding:80px;
+    border-radius: 30px;
+
+
+
     display: grid;
     height: 500px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 10px;
+    
 
     #button1 {
       grid-column: 2/3;

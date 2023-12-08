@@ -1,5 +1,9 @@
-import "./styles/main.css";
+import "./styles/main.scss";
 import { allBeginnerLevels } from "./colors/all-levels";
+import confetti, { Options } from "canvas-confetti";
+ 
+
+
 
 const buttons = Array.from(document.querySelectorAll('.button'));
 const matcher = document.querySelector<HTMLButtonElement>("#matcher");
@@ -14,15 +18,17 @@ if (!matcher || !gameButton || !instructions || !scoreCounter || buttons.length 
 let level = 0;
 let score = 0;
 let isClickable = false;
+let levelData = allBeginnerLevels[level];
 
 const game = () => {
-  const levelData = allBeginnerLevels[level];
+  levelData = allBeginnerLevels[level];
+  instructions.textContent = "Click the bubble that matches the color above";
   matcher.style.backgroundColor = levelData.matcherButton["matcher-button"];
   buttons.forEach((button, index) => {
     (button as HTMLButtonElement).style.backgroundColor = levelData.colorButtons[index].color;
   });
   isClickable = true;
-  gameButton.textContent = "Restart";
+  
 };
 
 const updateScore = () => {
@@ -38,17 +44,42 @@ const validateAnswer = (buttonIndex: number) => {
   const isMatch = allBeginnerLevels[level].colorButtons[buttonIndex].matcher;
 
   if (isMatch) {
-    alert("Correct! You matched the button!");
+    instructions.textContent ="Correct! You matched the button!";
+    
+    const matcherColor = levelData.matcherButton["matcher-button"];
+    const confettiOptions: Options = {
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: [matcherColor], // Set the color to the matcher button color
+    };
+    confetti(confettiOptions);
+    
     score++;
     updateScore();
     level++;
     if (level < allBeginnerLevels.length) {
-      game();
+      setTimeout(() => {
+        gameButton.textContent = "Restart";
+        game();
+      }, 2000); 
     } else {
-      alert("Congratulations! You completed all levels.");
+      instructions.textContent ="Congratulations! You completed all levels.";
     }
   } else {
-    alert("Incorrect! Try again.");
+    instructions.textContent ="Incorrect! Try again.";
+
+    
+
+    matcher.classList.add('shake');
+
+    setTimeout(() => {
+      matcher.classList.remove('shake');
+      isClickable = true;
+    }, 500); //
+
+    // Remove the 'shake' class after the animation ends
+    
   }
 };
 
@@ -56,15 +87,19 @@ const toggleGame = () => {
   if (level === 0) {
     startGame();
   } else {
+    
     restartGame();
   }
+  
 };
 
 const restartGame = () => {
   level = 0;
   score = 0;
   updateScore();
+  gameButton.textContent = "Start";
   game();
+  
 };
 
 const startGame = () => {
@@ -73,7 +108,7 @@ const startGame = () => {
   updateScore();
   isClickable = true;
   game();
-  gameButton.textContent = "Restart";
+  
 };
 
 buttons.forEach((button, index) => {
@@ -81,3 +116,5 @@ buttons.forEach((button, index) => {
 });
 
 gameButton.addEventListener("click", toggleGame);
+
+
