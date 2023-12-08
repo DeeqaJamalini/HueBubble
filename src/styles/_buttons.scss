@@ -1,8 +1,26 @@
 .button {
   border: none;
-    border-color: green;
+   
 }
 
 .matcher {
     border: none;
 }
+
+
+@keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25%, 75% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+  }
+  
+  /* Apply the keyframe animation to #game-button */
+  .shake {
+    animation: shake 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
+  }
