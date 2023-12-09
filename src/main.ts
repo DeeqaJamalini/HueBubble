@@ -9,8 +9,12 @@ const instructions =
   document.querySelector<HTMLParagraphElement>("#instructions");
 const scoreCounter =
   document.querySelector<HTMLParagraphElement>("#score-counter");
-  const correctSound = new Audio ("./sounds/mixkit-ethereal-fairy-win-sound-2019.wav");
-  const clickSound = new Audio ("./sounds/mixkit-hard-pop-click-2364.wav");
+const correctSound = new Audio(
+  "./src/sounds/mixkit-ethereal-fairy-win-sound-2019.wav"
+);
+const clickSound = new Audio("./src/sounds/mixkit-hard-pop-click-2364.wav");
+const clickSoundSpeed = 2.5;
+clickSound.playbackRate = clickSoundSpeed;
 
 if (
   !matcher ||
@@ -53,7 +57,6 @@ const validateAnswer = (buttonIndex: number) => {
     instructions.textContent = "Correct! You matched the bubble!";
 
     correctSound.play();
-
     const matcherColor = levelData.matcherButton["matcher-button"];
     const confettiOptions: Options = {
       particleCount: 100,
@@ -66,6 +69,7 @@ const validateAnswer = (buttonIndex: number) => {
     score++;
     updateScore();
     level++;
+    isClickable = false;
     if (level < allBeginnerLevels.length) {
       setTimeout(() => {
         gameButton.textContent = "Restart";
@@ -76,6 +80,7 @@ const validateAnswer = (buttonIndex: number) => {
     }
   } else {
     instructions.textContent = "Incorrect! Try again.";
+    clickSound.play();
 
     matcher.classList.add("shake");
 
@@ -112,6 +117,7 @@ const startGame = () => {
 
 buttons.forEach((button, index) => {
   button.addEventListener("click", () => validateAnswer(index));
+  
 });
 
 gameButton.addEventListener("click", toggleGame);
