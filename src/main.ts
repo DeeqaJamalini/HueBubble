@@ -9,6 +9,8 @@ const instructions =
   document.querySelector<HTMLParagraphElement>("#instructions");
 const scoreCounter =
   document.querySelector<HTMLParagraphElement>("#score-counter");
+  const correctSound = new Audio ("./sounds/mixkit-ethereal-fairy-win-sound-2019.wav");
+  const clickSound = new Audio ("./sounds/mixkit-hard-pop-click-2364.wav");
 
 if (
   !matcher ||
@@ -49,6 +51,8 @@ const validateAnswer = (buttonIndex: number) => {
 
   if (isMatch) {
     instructions.textContent = "Correct! You matched the bubble!";
+
+    correctSound.play();
 
     const matcherColor = levelData.matcherButton["matcher-button"];
     const confettiOptions: Options = {
