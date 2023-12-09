@@ -1,16 +1,37 @@
 //change the background of the whole site to the minth green color
 
-
 body {
-  background-image: linear-gradient(to right top, #ffd1eb, #f1c7eb, #dfbeeb, #cab7ec, #b0b0eb, #a3b4ed, #96b8ec, #8bbbea, #97c8ea, #a8d4e9, #bddeea, #d4e8ec);
+  background-image: linear-gradient(
+    to right top,
+    #ffd1eb,
+    #f1c7eb,
+    #dfbeeb,
+    #cab7ec,
+    #b0b0eb,
+    #a3b4ed,
+    #96b8ec,
+    #8bbbea,
+    #97c8ea,
+    #a8d4e9,
+    #bddeea,
+    #d4e8ec
+  );
 }
-
 #score-counter {
   display: flex;
-  justify-content: start;
-
+  justify-content: center;
+  align-items: center;
+  background-color: #b0a3d4;
+  width: 110px;
+  border-radius: 10px;
+  height: 25px;
+  text-align: center;
   font-family: "Oxanium", sans-serif;
   color: white;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: 5px;
+  box-shadow: 0 0 20px #ac97e6;
 }
 
 #header {
@@ -40,127 +61,475 @@ body {
 .user-selection {
   font-family: "Oxanium", sans-serif;
   color: white;
-  
 }
 
-
-  #game-button {
-    background-color: #B8E2C8;
-    border-style: none;
-    border-radius: 10px;
-    display: flex ;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 100px;
-    margin-top: 20px;
-    padding-top: 10px;  
-    
-
-  }
-
-
-
-.user-selection {
-
+.game-option-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100px;
+  width: 100%;
+  font-family: "Oxanium", sans-serif;
+  color: white;
+}
+
+#game-button {
+  background-color: #6d5a8e;
+  border-style: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100px;
+  margin-top: 15px;
+  //padding-top: px;
+  color: white;
+  font-size: medium;
+  font-family: "Oxanium", sans-serif;
+  box-shadow: #7d7291 0px 0px 15px;
+}
+
+.user-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 550px;
+  //align the text to the center
+  text-align: center;
+
+  &__instructions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    font-family: "Oxanium", sans-serif;
+    color: white;
+
+  }
 
   &__buttons {
-
     background-color: white;
-    padding:80px;
+    padding: 10px;
+    // width:200px;
+    // height:100px;
     border-radius: 30px;
-
-
 
     display: grid;
     height: 500px;
+    width: 250px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 10px;
-    
+    gap: 5px;
+    box-shadow: #867e96 0px 0px 15px;
 
     #button1 {
-      grid-column: 2/3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-column: 1/2;
       grid-row: 1/ 2;
       border-radius: 50%;
-      height: 100px;
-      width: 100px;
+      height: 40px;
+      width: 40px;
+      margin: auto;
+      box-shadow: //change the background of the whole site to the minth green color
+
+body {
+  background-image: linear-gradient(
+    to right top,
+    #ffd1eb,
+    #f1c7eb,
+    #dfbeeb,
+    #cab7ec,
+    #b0b0eb,
+    #a3b4ed,
+    #96b8ec,
+    #8bbbea,
+    #97c8ea,
+    #a8d4e9,
+    #bddeea,
+    #d4e8ec
+  );
+}
+#score-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b0a3d4;
+  width: 110px;
+  border-radius: 10px;
+  height: 25px;
+  text-align: center;
+  font-family: "Oxanium", sans-serif;
+  color: white;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: 5px;
+  box-shadow: 0 0 20px #ac97e6;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  font-family: "Oxanium", sans-serif;
+  color: white;
+}
+
+.color-matcher {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  font-family: "Oxanium", sans-serif;
+  color: white;
+
+  &__color {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    border: none;
+  }
+}
+
+.user-selection {
+  font-family: "Oxanium", sans-serif;
+  color: white;
+}
+
+.game-option-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  font-family: "Oxanium", sans-serif;
+  color: white;
+}
+
+#game-button {
+  background-color: #6d5a8e;
+  border-style: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100px;
+  margin-top: 15px;
+  //padding-top: px;
+  color: white;
+  font-size: medium;
+  font-family: "Oxanium", sans-serif;
+  box-shadow: #7d7291 0px 0px 15px;
+}
+
+.user-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 550px;
+  //align the text to the center
+  text-align: center;
+
+  &__buttons {
+    background-color: white;
+    padding: 10px;
+    // width:200px;
+    // height:100px;
+    border-radius: 30px;
+
+    display: grid;
+    height: 500px;
+    width: 250px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    box-shadow: #867e96 0px 0px 15px;
+
+    #button1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-column: 1/2;
+      grid-row: 1/ 2;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      margin: auto;
+      
     }
 
     #button2 {
-      grid-column: 4 /5;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 3/4;
       grid-row: 1/2;
       border-radius: 50%;
-      height: 100px;
-      width: 100px;
+      height: 40px;
+      width: 40px;
     }
 
     #button3 {
-      grid-column: 3/4;
-      grid-row: 2/3;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 5/6;
+      grid-row: 1/2;
       border-radius: 50%;
-      height: 100px;
-      width: 100px;
+      height: 40px;
+      width: 40px;
     }
 
     #button4 {
-      grid-column: 1/2;
-      grid-row: 3/4;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 2/3;
+      grid-row: 2/3;
       border-radius: 50%;
-      height: 100px;
-      width: 100px;
+      height: 40px;
+      width: 40px;
     }
 
     #button5 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
       grid-column: 4/5;
-      grid-row: 3/4;
+      grid-row: 2/3;
       border-radius: 50%;
-      height: 100px;
-      width: 100px;
+      height: 40px;
+      width: 40px;
     }
 
     #button6 {
-      grid-column: 2/3;
-      grid-row: 4/5;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 1/2;
+      grid-row: 3/4;
       border-radius: 50%;
-      height: 100px;
-      width: 100px;
+      height: 40px;
+      width: 40px;
     }
 
     #button7 {
-      grid-column: 5/6;
-      grid-row: 4/5;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 3/4;
+      grid-row: 3/4;
       border-radius: 50%;
-      height: 100px;
-      width: 100px;
+      height: 40px;
+      width: 40px;
     }
 
     #button8 {
-      grid-column: 1/2;
-      grid-row: 5/6;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 5/6;
+      grid-row: 3/4;
       border-radius: 50%;
-      height: 100px;
-      width: 100px;
+      height: 40px;
+      width: 40px;
     }
 
     #button9 {
-      grid-column: 3/4;
-      grid-row: 5/6;
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 2/3;
+      grid-row: 4/5;
       border-radius: 50%;
-      height: 100px;
-      width: 100px;
+      height: 40px;
+      width: 40px;
     }
 
     #button10 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 4/5;
+      grid-row: 4/5;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button11 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 1/2;
+      grid-row: 5/6;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button12 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 3/4;
+      grid-row: 5/6;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button13 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
       grid-column: 5/6;
       grid-row: 5/6;
       border-radius: 50%;
-      height: 100px;
-      width: 100px;
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
+
+    }
+
+    #button2 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 3/4;
+      grid-row: 1/2;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button3 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 5/6;
+      grid-row: 1/2;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button4 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 2/3;
+      grid-row: 2/3;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button5 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 4/5;
+      grid-row: 2/3;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button6 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 1/2;
+      grid-row: 3/4;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button7 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 3/4;
+      grid-row: 3/4;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button8 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 5/6;
+      grid-row: 3/4;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button9 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 2/3;
+      grid-row: 4/5;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button10 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 4/5;
+      grid-row: 4/5;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button11 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 1/2;
+      grid-row: 5/6;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button12 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 3/4;
+      grid-row: 5/6;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+    }
+
+    #button13 {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      grid-column: 5/6;
+      grid-row: 5/6;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
     }
   }
 }

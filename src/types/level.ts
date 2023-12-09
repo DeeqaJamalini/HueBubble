@@ -15,6 +15,9 @@ export type Level =
                 {"color": string, "matcher": boolean},
                 {"color": string, "matcher": boolean},
                 {"color": string, "matcher": boolean},
+                {"color": string, "matcher": boolean},
+                {"color": string, "matcher": boolean},
+                {"color": string, "matcher": boolean},
 
             ]
         }

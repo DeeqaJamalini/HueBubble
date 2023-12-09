@@ -15,6 +15,10 @@ export const beginnerLevelOne: Level = {
     { color: "#1f88a3", matcher: false },
     { color: "#1f809c", matcher: false },
     { color: "#1f7895", matcher: false },
+    { color: "#5ae0e8", matcher: false },
+    { color: "#1f6490", matcher: false },
+    { color: "#1f5c89", matcher: false },
+
   ],
 };
 
@@ -33,6 +37,9 @@ export const beginnerLevelTwo: Level = {
     { color: "#b2ade7", matcher: false },
     { color: "#b2ade7", matcher: false },
     { color: "#8a82c9", matcher: true },
+    { color: "#b2ade7", matcher: false },
+    { color: "#b2ade7", matcher: false },
+    { color: "#b2ade7", matcher: false },
   ],
 };
 
@@ -51,6 +58,9 @@ export const beginnerLevelThree: Level = {
     { color: "#68cf30", matcher: true },
     { color: "#6ccf2e", matcher: false },
     { color: "#6acf2f", matcher: false },
+    { color: "#6ccf2f", matcher: false },
+    { color: "#6ccf2e", matcher: false },
+    { color: "#6ccf2d", matcher: false },
   ],
 };
 
@@ -69,6 +79,9 @@ export const beginnerLevelFour: Level = {
     { color: "#3fc08d", matcher: false },
     { color: "#3fc08a", matcher: false },
     { color: "#3fc090", matcher: false },
+    { color: "#3fc08c", matcher: false },
+    { color: "#3fc08e", matcher: false },
+    { color: "#3fc08f", matcher: false },
   ],
 };
 
@@ -87,6 +100,9 @@ export const beginnerLevelFive: Level = {
     { color: "#a7a2bb", matcher: false },
     { color: "#a799b4", matcher: false },
     { color: "#a78fa6", matcher: false },
+    { color: "#a7879f", matcher: false },
+    { color: "#a77f97", matcher: false },
+    { color: "#a7778f", matcher: false },
   ],
 };
 
@@ -105,6 +121,9 @@ export const beginnerLevelSix: Level = {
     { color: "#c991bb", matcher: false },
     { color: "#c987b4", matcher: false },
     { color: "#c97fa6", matcher: false },
+    { color: "#c9779f", matcher: false },
+    { color: "#c96f97", matcher: false },
+    { color: "#c9678f", matcher: false },
   ],
 };
 
@@ -123,6 +142,9 @@ export const beginnerLevelSeven: Level = {
     { color: "#fca594", matcher: false },
     { color: "#fc9c8b", matcher: false },
     { color: "#fc9382", matcher: false },
+    { color: "#fc8b7a", matcher: false },
+    { color: "#fc8372", matcher: false },
+    { color: "#fc7b6a", matcher: false },
   ],
 };
 
@@ -141,5 +163,8 @@ export const beginnerLevelEight: Level = {
     { color: "#b1dcc5", matcher: false },
     { color: "#aecbb8", matcher: false },
     { color: "#b1c9ab", matcher: false },
+    { color: "#b1c1a3", matcher: false },
+    { color: "#b1b99b", matcher: false },
+    { color: "#b1b193", matcher: false },
   ],
 };

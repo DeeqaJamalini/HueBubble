@@ -1,17 +1,22 @@
 import "./styles/main.scss";
 import { allBeginnerLevels } from "./colors/all-levels";
 import confetti, { Options } from "canvas-confetti";
- 
 
-
-
-const buttons = Array.from(document.querySelectorAll('.button'));
+const buttons = Array.from(document.querySelectorAll(".button"));
 const matcher = document.querySelector<HTMLButtonElement>("#matcher");
 const gameButton = document.querySelector<HTMLButtonElement>("#game-button");
-const instructions = document.querySelector<HTMLParagraphElement>("#instructions");
-const scoreCounter = document.querySelector<HTMLParagraphElement>("#score-counter");
+const instructions =
+  document.querySelector<HTMLParagraphElement>("#instructions");
+const scoreCounter =
+  document.querySelector<HTMLParagraphElement>("#score-counter");
 
-if (!matcher || !gameButton || !instructions || !scoreCounter || buttons.length !== 10) {
+if (
+  !matcher ||
+  !gameButton ||
+  !instructions ||
+  !scoreCounter ||
+  buttons.length !== 13
+) {
   throw new Error("Something is wrong with my HTML elements");
 }
 
@@ -25,15 +30,14 @@ const game = () => {
   instructions.textContent = "Click the bubble that matches the color above";
   matcher.style.backgroundColor = levelData.matcherButton["matcher-button"];
   buttons.forEach((button, index) => {
-    (button as HTMLButtonElement).style.backgroundColor = levelData.colorButtons[index].color;
+    (button as HTMLButtonElement).style.backgroundColor =
+      levelData.colorButtons[index].color;
   });
   isClickable = true;
-  
 };
 
 const updateScore = () => {
   (scoreCounter as HTMLParagraphElement).textContent = `Score: ${score}/100`;
-
 };
 
 const validateAnswer = (buttonIndex: number) => {
@@ -44,17 +48,17 @@ const validateAnswer = (buttonIndex: number) => {
   const isMatch = allBeginnerLevels[level].colorButtons[buttonIndex].matcher;
 
   if (isMatch) {
-    instructions.textContent ="Correct! You matched the button!";
-    
+    instructions.textContent = "Correct! You matched the bubble!";
+
     const matcherColor = levelData.matcherButton["matcher-button"];
     const confettiOptions: Options = {
       particleCount: 100,
       spread: 70,
       origin: { y: 0.6 },
-      colors: [matcherColor], // Set the color to the matcher button color
+      colors: [matcherColor],
     };
     confetti(confettiOptions);
-    
+
     score++;
     updateScore();
     level++;
@@ -62,24 +66,19 @@ const validateAnswer = (buttonIndex: number) => {
       setTimeout(() => {
         gameButton.textContent = "Restart";
         game();
-      }, 2000); 
+      }, 2500);
     } else {
-      instructions.textContent ="Congratulations! You completed all levels.";
+      instructions.textContent = "Congratulations! You completed all levels.";
     }
   } else {
-    instructions.textContent ="Incorrect! Try again.";
+    instructions.textContent = "Incorrect! Try again.";
 
-    
-
-    matcher.classList.add('shake');
+    matcher.classList.add("shake");
 
     setTimeout(() => {
-      matcher.classList.remove('shake');
+      matcher.classList.remove("shake");
       isClickable = true;
-    }, 500); //
-
-    // Remove the 'shake' class after the animation ends
-    
+    }, 500);
   }
 };
 
@@ -87,10 +86,8 @@ const toggleGame = () => {
   if (level === 0) {
     startGame();
   } else {
-    
     restartGame();
   }
-  
 };
 
 const restartGame = () => {
@@ -99,7 +96,6 @@ const restartGame = () => {
   updateScore();
   gameButton.textContent = "Start";
   game();
-  
 };
 
 const startGame = () => {
@@ -108,7 +104,6 @@ const startGame = () => {
   updateScore();
   isClickable = true;
   game();
-  
 };
 
 buttons.forEach((button, index) => {
@@ -116,5 +111,3 @@ buttons.forEach((button, index) => {
 });
 
 gameButton.addEventListener("click", toggleGame);
-
-
