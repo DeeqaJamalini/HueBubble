@@ -100,7 +100,7 @@ const game = () => {
 };
 
 const updateScore = () => {
-  (scoreCounter as HTMLParagraphElement).textContent = `Score: ${score}/100`;
+  (scoreCounter as HTMLParagraphElement).textContent = `Score: ${score}/20`;
 };
 
 const validateAnswer = (buttonIndex: number) => {
