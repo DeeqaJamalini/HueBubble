@@ -11,7 +11,7 @@ let score = 0;
 let isClickable = false;
 let isIntermediateLevel = false;
 let isExpertLevel = false;
-let isLevelSelected = false; // New flag to track if a level is selected
+let isLevelSelected = false;
 let levelData = allBeginnerLevels[level];
 let confettiInstance: any = null;
 
@@ -61,7 +61,6 @@ if (
 }
 
 const clearColorButtons = () => {
-  // Reset the buttons to their original colors
   buttons.forEach((button, index) => {
     (button as HTMLButtonElement).style.backgroundColor =
       originalButtonColors[index];
@@ -134,7 +133,6 @@ const validateAnswer = (buttonIndex: number) => {
         game();
       }, 2500);
     } else {
-      //test if you need to add a timeout to this
       completedLevelSound.play();
       instructions.textContent = "Congratulations! You completed all levels.";
     }
