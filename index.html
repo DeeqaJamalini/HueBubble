@@ -5,16 +5,21 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HueBubble Game</title>
-    <script type="module" crossorigin src="./assets/index-DrlqQSim.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-97djAfYB.css">
+    <script type="module" crossorigin src="./assets/index-hDGC-VWX.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-aHp378ga.css">
   </head>
   <body>
     <h1 id="header">HueBubble</h1>
 
     <section class="Game">
       <aside>
-        <p id="score-counter">Score: 0/100</p>
+        <p id="score-counter">Score: 0/20</p>
+        <button id="beginner-button">Beginner</button>
+        <button id="intermediate-button">Intermediate</button>
+        <button id="expert-button">Expert</button>
+        <p id="current-level"></p>
       </aside>
+
       <div class="color-matcher">
         <p class="color-matcher__text">Matcher</p>
 
@@ -23,7 +28,7 @@
 
       <div class="user-selection">
         <p class="user-selection__instructions" id="instructions">
-          Click the bubble that matches the color above
+          Please select a level
         </p>
 
         <div class="user-selection__buttons">
