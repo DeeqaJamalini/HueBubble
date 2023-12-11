@@ -13,7 +13,7 @@ let isIntermediateLevel = false;
 let isExpertLevel = false;
 let isLevelSelected = false;
 let levelData = allBeginnerLevels[level];
-let confettiInstance: any = null;
+
 
 let timeoutId: number;
 const buttons = Array.from(document.querySelectorAll(".button"));
@@ -67,11 +67,6 @@ const clearColorButtons = () => {
   });
 };
 
-const stopConfetti = () => {
-  if (confettiInstance) {
-    confettiInstance.reset();
-  }
-};
 
 const clearMatcherButton = () => {
   (matcher as HTMLButtonElement).style.backgroundColor = "#FFFFFF";
@@ -190,7 +185,7 @@ beginnerButton.addEventListener("click", () => {
   clearColorButtons();
   clearMatcherButton();
   gameButton.textContent = "Start";
-  stopConfetti();
+  
 });
 
 intermediateButton.addEventListener("click", () => {
@@ -209,6 +204,7 @@ intermediateButton.addEventListener("click", () => {
   clearMatcherButton();
 
   gameButton.textContent = "Start";
+  
 });
 
 expertButton.addEventListener("click", () => {
