@@ -26,7 +26,6 @@ export const intermediateLevel2: Level = {
     "matcher-button": "#d0edd4",
   },
   colorButtons: [
-    
     { color: "#d0edd4", matcher: true },
     { color: "#d0edda", matcher: false },
     { color: "#d0ede0", matcher: false },
@@ -67,49 +66,47 @@ export const intermediateLevel3: Level = {
 
 export const intermediateLevel4: Level = {
   matcherButton: {
-    "matcher-button": "#4dff4d",  // A bright green color
+    "matcher-button": "#4dff4d",
   },
   colorButtons: [
-    { color: "#00ff00", matcher: false },  // Green
-    { color: "#19e619", matcher: false },  // Light Green
-    { color: "#33cc33", matcher: false },  // Lime Green
-    { color: "#4dff4d", matcher: true },   // Bright Green (Matcher)
-    { color: "#66b266", matcher: false },  // Medium Green
-    { color: "#80ff80", matcher: false },  // Pastel Green
-    { color: "#00cc00", matcher: false },  // Forest Green
-    { color: "#99ff99", matcher: false },  // Mint Green
-    { color: "#29a329", matcher: false },  // Dark Green
-    { color: "#b3ffb3", matcher: false },  // Pale Green
-    { color: "#4db84d", matcher: false },  // Olive Green
-    { color: "#008000", matcher: false },  // Dark Olive Green
-    { color: "#1a661a", matcher: false },  // Pine Green
+    { color: "#00ff00", matcher: false },
+    { color: "#19e619", matcher: false },
+    { color: "#33cc33", matcher: false },
+    { color: "#4dff4d", matcher: true },
+    { color: "#66b266", matcher: false },
+    { color: "#80ff80", matcher: false },
+    { color: "#00cc00", matcher: false },
+    { color: "#99ff99", matcher: false },
+    { color: "#29a329", matcher: false },
+    { color: "#b3ffb3", matcher: false },
+    { color: "#4db84d", matcher: false },
+    { color: "#008000", matcher: false },
+    { color: "#1a661a", matcher: false },
   ],
 };
 
 export const intermediateLevel5: Level = {
   matcherButton: {
-    "matcher-button": "#8f7432",  // A bright yellow color
+    "matcher-button": "#8f7432",
   },
 
- colorButtons: [
-    { color: "#8f7438", matcher: false },  // Light Yellow
-    { color: "#8f743e", matcher: false },  // Pastel Yellow
-    { color: "#8f7444", matcher: false },  // Canary Yellow
-    { color: "#8f744a", matcher: false },  // Lemon Yellow
-    { color: "#8f7450", matcher: false },  // Golden Yellow
-    { color: "#8f7456", matcher: false },  // Maize Yellow
-    { color: "#8f745c", matcher: false },  // Straw Yellow
-    { color: "#8f7462", matcher: false },  // Sunflower Yellow
+  colorButtons: [
+    { color: "#8f7438", matcher: false },
+    { color: "#8f743e", matcher: false },
+    { color: "#8f7444", matcher: false },
+    { color: "#8f744a", matcher: false },
+    { color: "#8f7450", matcher: false },
+    { color: "#8f7456", matcher: false },
+    { color: "#8f745c", matcher: false },
+    { color: "#8f7462", matcher: false },
 
-    { color: "#8f7468", matcher: false },  // Amber Yellow
-    { color: "#8f746e", matcher: false },  // Flaxen Yellow
-    { color: "#8f7474", matcher: false },  // Corn Yellow
-    { color: "#8f747a", matcher: false },  // Daffodil Yellow
-    { color: "#8f7432", matcher: true },   // Bright Yellow (Matcher)
+    { color: "#8f7468", matcher: false },
+    { color: "#8f746e", matcher: false },
+    { color: "#8f7474", matcher: false },
+    { color: "#8f747a", matcher: false },
+    { color: "#8f7432", matcher: true },
   ],
- 
 };
-
 
 export const intermediateLevel6: Level = {
   matcherButton: {
@@ -197,8 +194,6 @@ export const intermediateLevel9: Level = {
     { color: "#fd554a", matcher: false },
   ],
 };
-
-
 
 export const intermediateLevel10: Level = {
   matcherButton: {

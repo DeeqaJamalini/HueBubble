@@ -91,23 +91,23 @@ export const expertLevel4: Level = {
 
 export const expertLevel5: Level = {
   matcherButton: {
-    "matcher-button": "#f7f007",  // A bright yellow color
+    "matcher-button": "#f7f007",  
   },
   colorButtons: [
-    { color: "#f7f00d", matcher: false },  // Light Yellow
-    { color: "#f7f013", matcher: false },  // Pastel Yellow
-    { color: "#f7f019", matcher: false },  // Canary Yellow
-    { color: "#f7f01f", matcher: false },  // Lemon Yellow
-    { color: "#f7f025", matcher: false },  // Golden Yellow
-    { color: "#f7f02b", matcher: false },  // Maize Yellow
-    { color: "#f7f031", matcher: false },  // Straw Yellow
-    { color: "#f7f037", matcher: false },  // Sunflower Yellow
+    { color: "#f7f00d", matcher: false },  
+    { color: "#f7f013", matcher: false },  
+    { color: "#f7f019", matcher: false },  
+    { color: "#f7f01f", matcher: false },  
+    { color: "#f7f025", matcher: false },  
+    { color: "#f7f02b", matcher: false },  
+    { color: "#f7f031", matcher: false },  
+    { color: "#f7f037", matcher: false },  
 
-    { color: "#f7f043", matcher: false },  // Amber Yellow
-    { color: "#f7f049", matcher: false },  // Flaxen Yellow
-    { color: "#f7f04f", matcher: false },  // Corn Yellow
-    { color: "#f7f055", matcher: false },  // Daffodil Yellow
-    { color: "#f7f007", matcher: true },   // Bright Yellow (Matcher)
+    { color: "#f7f043", matcher: false },  
+    { color: "#f7f049", matcher: false },  
+    { color: "#f7f04f", matcher: false },  
+    { color: "#f7f055", matcher: false },  
+    { color: "#f7f007", matcher: true },   
   ],
 };
 

@@ -94,7 +94,7 @@ export const beginnerLevel5: Level = {
     { color: "#84659a", matcher: false },
     { color: "#5fc5d5", matcher: false },
     { color: "#4c50b3", matcher: false },
-    { color: "#b8e5ec", matcher: true }, // Matching color with slight variation
+    { color: "#b8e5ec", matcher: true }, 
     { color: "#a7b8c9", matcher: false },
     { color: "#a7aac2", matcher: false },
     { color: "#a7a2bb", matcher: false },
@@ -111,10 +111,7 @@ export const beginnerLevel6: Level = {
     "matcher-button": "#c97bcb",
   },
   colorButtons: [
-    //make the colors really different so its easier to tell them apart you are providing the user with beginner colors for a color matching game
-
-    //make the colors really easy to differentiate
-    // Matching color in the 8th position
+  
     { color: "#be41a5", matcher: false },
     { color: "#bcead1", matcher: false },
     { color: "#c993b5", matcher: false },
@@ -140,7 +137,7 @@ export const beginnerLevel7: Level = {
     { color: "#b18d4e", matcher: false },
     { color: "#d1662e", matcher: true },
     { color: "#fcc79a", matcher: false },
-    { color: "#fcd5b9", matcher: false }, // Matching color randomly placed
+    { color: "#fcd5b9", matcher: false }, 
     { color: "#fcbda6", matcher: false },
     { color: "#fcb19d", matcher: false },
     { color: "#fca594", matcher: false },
@@ -163,7 +160,7 @@ export const beginnerLevel8: Level = {
     { color: "#a5d4bf", matcher: false },
     { color: "#afd2b2", matcher: false },
     { color: "#aadab9", matcher: false },
-    { color: "#6c7693", matcher: true }, // Matching color in the 8th position
+    { color: "#6c7693", matcher: true }, 
     { color: "#b1dcc5", matcher: false },
     { color: "#aecbb8", matcher: false },
     { color: "#b1c9ab", matcher: false },
@@ -179,7 +176,7 @@ export const beginnerLevel9: Level = {
   },
 
   colorButtons: [
-    // make the colors a little more similar
+    
 
     { color: "#c3a78b", matcher: false },
     { color: "#c3af83", matcher: false },
@@ -189,7 +186,7 @@ export const beginnerLevel9: Level = {
     { color: "#c3cf63", matcher: false },
     { color: "#c3d75b", matcher: false },
     { color: "#c3df53", matcher: false },
-    { color: "#88c837", matcher: true }, //
+    { color: "#88c837", matcher: true }, 
     { color: "#c3e74b", matcher: false },
     { color: "#c3ef43", matcher: false },
     { color: "#c3f73b", matcher: false },
@@ -203,8 +200,7 @@ export const beginnerLevel10: Level = {
   },
 
   colorButtons: [
-    // make the colors a little more similar
-    // Matching color in the 8th position
+   
     { color: "#9349b6", matcher: false },
     { color: "#8e6a95", matcher: false },
     { color: "#9d0bf4", matcher: false },
@@ -226,7 +222,7 @@ export const beginnerLevel11: Level = {
     "matcher-button": "#ff8c00",
   },
 
-  //make these colors completely different
+  
 
   colorButtons: [
     { color: "#ff0000", matcher: false },
@@ -251,9 +247,9 @@ export const beginnerLevel12: Level = {
   },
 
   colorButtons: [
-    //make it beginner level hue differentiation
+    
 
-    { color: "#99c13e", matcher: true }, // Matching color in the 8th position
+    { color: "#99c13e", matcher: true }, 
     { color: "#96697f", matcher: false },
     { color: "#ffbf00", matcher: false },
     { color: "#8f8f04", matcher: false },
@@ -271,45 +267,45 @@ export const beginnerLevel12: Level = {
 
 export const beginnerLevel13: Level = {
   matcherButton: {
-    "matcher-button": "#575b61", // Silver color for the matcher button
+    "matcher-button": "#575b61", 
   },
   colorButtons: [
-    // Matching silver color in the 1st position
+    
     { color: "#5687a9", matcher: false },
-    { color: "#d4d4d4", matcher: false }, // Lighter silver shade
-    { color: "#a9a9a9", matcher: false }, // Darker silver shade
-    { color: "#bdbdbd", matcher: false }, // Another silver shade
-    { color: "#cfcfcf", matcher: false }, // Yet another silver shade
+    { color: "#d4d4d4", matcher: false }, 
+    { color: "#a9a9a9", matcher: false }, 
+    { color: "#bdbdbd", matcher: false }, 
+    { color: "#cfcfcf", matcher: false }, 
     { color: "#acacac", matcher: false },
-    { color: "#575b61", matcher: true }, // Another shade of silver
-    { color: "#969696", matcher: false }, // Another dark silver shade
-    { color: "#e0e0e0", matcher: false }, // Another light silver shade
-    { color: "#b5b5b5", matcher: false }, // Another shade of silver
-    { color: "#c8c8c8", matcher: false }, // Another shade of silver
-    { color: "#9b9b9b", matcher: false }, // Another dark silver shade
-    { color: "#d6d6d6", matcher: false }, // Another light silver shade
+    { color: "#575b61", matcher: true }, 
+    { color: "#969696", matcher: false },
+    { color: "#e0e0e0", matcher: false }, 
+    { color: "#b5b5b5", matcher: false }, 
+    { color: "#c8c8c8", matcher: false }, 
+    { color: "#9b9b9b", matcher: false }, 
+    { color: "#d6d6d6", matcher: false }, 
   ],
 };
 
 export const beginnerLevel14: Level = {
   matcherButton: {
-    "matcher-button": "#a854ab", // Purple color for the matcher button
+    "matcher-button": "#a854ab", 
   },
   colorButtons: [
-    // Matching purple color in the 1st position
+    
     { color: "#411ae5", matcher: false },
-    { color: "#7e5bea", matcher: false }, // Lighter purple shade
+    { color: "#7e5bea", matcher: false }, 
     { color: "#4720a3", matcher: false },
-    { color: "#a854ab", matcher: true }, // Darker purple shade
-    { color: "#663cc6", matcher: false }, // Another purple shade
-    { color: "#8c72d9", matcher: false }, // Yet another purple shade
-    { color: "#4b2a8a", matcher: false }, // Another shade of purple
-    { color: "#3e1f6f", matcher: false }, // Another dark purple shade
-    { color: "#a094e3", matcher: false }, // Another light purple shade
-    { color: "#5741b5", matcher: false }, // Another shade of purple
-    { color: "#7454cc", matcher: false }, // Another shade of purple
-    { color: "#4a2591", matcher: false }, // Another dark purple shade
-    { color: "#9178d9", matcher: false }, // Another light purple shade
+    { color: "#a854ab", matcher: true }, 
+    { color: "#663cc6", matcher: false }, 
+    { color: "#8c72d9", matcher: false }, 
+    { color: "#4b2a8a", matcher: false }, 
+    { color: "#3e1f6f", matcher: false }, 
+    { color: "#a094e3", matcher: false }, 
+    { color: "#5741b5", matcher: false }, 
+    { color: "#7454cc", matcher: false }, 
+    { color: "#4a2591", matcher: false }, 
+    { color: "#9178d9", matcher: false }, 
   ],
 };
 
