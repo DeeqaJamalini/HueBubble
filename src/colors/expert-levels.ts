@@ -262,7 +262,7 @@ export const expertLevel11: Level = {
       },
   
       colorButtons: [
-                 //make the colors really similar
+                
 
         
         { color: "#8e926e", matcher: false },

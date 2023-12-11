@@ -172,7 +172,7 @@ export const intermediateLevel8: Level = {
   ],
 };
 
-//13 colors that are intermediately similar to the matcher color where one color matches the matcher
+
 
 export const intermediateLevel9: Level = {
   matcherButton: {
