@@ -9,8 +9,7 @@ Welcome to the Color Matcher Game! This interactive web game challenges players 
 
 ## Getting Started
 
-1. Clone this repository.
-2. Open the `index.html` file in a web browser to start the game.
+1. Visit the [HueBubble Site](https://deeqajamalini.github.io/HueBubble/)
 
 ## How to Play
 
