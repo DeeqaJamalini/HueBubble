@@ -33,12 +33,12 @@ const scoreCounter =
 const currentLevelDisplay =
   document.querySelector<HTMLParagraphElement>("#current-level");
 const correctSound = new Audio(
-  "./src/sounds/mixkit-ethereal-fairy-win-sound-2019.wav"
+  "../sounds/mixkit-ethereal-fairy-win-sound-2019.wav"
 );
 const completedLevelSound = new Audio(
-  "./src/sounds/mixkit-casting-long-fairy-magic-spell-875.wav"
+  "../sounds/mixkit-casting-long-fairy-magic-spell-875.wav"
 );
-const clickSound = new Audio("./src/sounds/mixkit-hard-pop-click-2364.wav");
+const clickSound = new Audio("../sounds/mixkit-hard-pop-click-2364.wav");
 const clickSoundSpeed = 3;
 clickSound.playbackRate = clickSoundSpeed;
 let levelType = "";
@@ -184,6 +184,9 @@ beginnerButton.addEventListener("click", () => {
   isLevelSelected = true;
   instructions.textContent =
     "You selected the Beginner level. Click 'Start' to begin.";
+  currentLevelDisplay.textContent = ``;
+  score = 0;
+  updateScore();
   clearColorButtons();
   clearMatcherButton();
   gameButton.textContent = "Start";
@@ -199,8 +202,12 @@ intermediateButton.addEventListener("click", () => {
   isLevelSelected = true;
   instructions.textContent =
     "You selected the Intermediate level. Click 'Start' to begin.";
+  currentLevelDisplay.textContent = ``;
+  score = 0;
+  updateScore();
   clearColorButtons();
   clearMatcherButton();
+
   gameButton.textContent = "Start";
 });
 
@@ -212,6 +219,9 @@ expertButton.addEventListener("click", () => {
   isLevelSelected = true;
   instructions.textContent =
     "You selected the Expert level. Click 'Start' to begin.";
+  currentLevelDisplay.textContent = ``;
+  score = 0;
+  updateScore();
   clearColorButtons();
   clearMatcherButton();
   gameButton.textContent = "Start";
