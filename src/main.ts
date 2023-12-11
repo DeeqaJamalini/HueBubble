@@ -5,6 +5,9 @@ import {
   allExpertLevels,
 } from "./colors/all-levels";
 import confetti, { Options } from "canvas-confetti";
+import fairySound from "../sounds/mixkit-ethereal-fairy-win-sound-2019.wav";
+import clickingSoundAudio from "../sounds/mixkit-hard-pop-click-2364.wav";
+import completedLevelSoundAudio from "../sounds/mixkit-casting-long-fairy-magic-spell-875.wav";
 
 let level = 0;
 let score = 0;
@@ -33,12 +36,12 @@ const scoreCounter =
 const currentLevelDisplay =
   document.querySelector<HTMLParagraphElement>("#current-level");
 const correctSound = new Audio(
-  "../sounds/mixkit-ethereal-fairy-win-sound-2019.wav"
+ fairySound
 );
 const completedLevelSound = new Audio(
-  "../sounds/mixkit-casting-long-fairy-magic-spell-875.wav"
+  completedLevelSoundAudio
 );
-const clickSound = new Audio("../sounds/mixkit-hard-pop-click-2364.wav");
+const clickSound = new Audio(clickingSoundAudio);
 const clickSoundSpeed = 3;
 clickSound.playbackRate = clickSoundSpeed;
 let levelType = "";
