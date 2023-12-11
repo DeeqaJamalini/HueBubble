@@ -1,5 +1,3 @@
-//change the background of the whole site to the minth green color
-
 body {
   background-image: linear-gradient(
     to right top,
@@ -18,7 +16,7 @@ body {
   );
 
   height: 100vh;
-  
+
   overflow: hidden;
 }
 #score-counter {
@@ -71,7 +69,7 @@ body {
 }
 
 .user-input-output {
-  height: 100px; ;
+  height: 100px;
 }
 
 .level-selectors {
@@ -97,7 +95,6 @@ body {
     font-family: "Oxanium", sans-serif;
     box-shadow: #7d7291 0px 0px 15px;
   }
-
 }
 
 .game-option-buttons {
@@ -152,8 +149,7 @@ body {
   &__buttons {
     background-color: white;
     padding: 10px;
-    // width:200px;
-    // height:100px;
+
     border-radius: 30px;
 
     display: grid;
@@ -328,7 +324,7 @@ body {
     margin-left: 1vw;
     box-shadow: 0 0 20px #ac97e6;
   }
-  
+
   #current-level {
     display: flex;
     justify-content: end;
@@ -336,14 +332,14 @@ body {
     color: white;
     font-size: 20px;
   }
-  
+
   #header {
     display: flex;
     justify-content: center;
     font-family: "Oxanium", sans-serif;
     color: white;
   }
-  
+
   .color-matcher {
     display: flex;
     flex-direction: column;
@@ -353,7 +349,7 @@ body {
     font-family: "Oxanium", sans-serif;
     color: white;
     font-size: 20px;
-  
+
     &__color {
       border-radius: 50%;
       height: 100px;
@@ -361,11 +357,11 @@ body {
       border: none;
     }
   }
-  
+
   .user-input-output {
-    height: 100px; ;
+    height: 100px;
   }
-  
+
   .level-selectors {
     display: flex;
     align-items: center;
@@ -373,7 +369,7 @@ body {
     width: 100%;
     font-family: "Oxanium", sans-serif;
     color: white;
-  
+
     &__button {
       background-color: #6d5a8e;
       border-style: none;
@@ -390,9 +386,8 @@ body {
       font-family: "Oxanium", sans-serif;
       box-shadow: #7d7291 0px 0px 15px;
     }
-  
   }
-  
+
   .game-option-buttons {
     display: flex;
     flex-direction: column;
@@ -402,7 +397,7 @@ body {
     font-family: "Oxanium", sans-serif;
     color: white;
   }
-  
+
   #game-button {
     background-color: #6d5a8e;
     border-style: none;
@@ -414,13 +409,13 @@ body {
     height: 50px;
     width: 150px;
     margin-top: 20px;
-    //padding-top: px;
+
     color: white;
-    font-size:20px;
+    font-size: 20px;
     font-family: "Oxanium", sans-serif;
     box-shadow: #7d7291 0px 0px 15px;
   }
-  
+
   .user-selection {
     font-family: "Oxanium", sans-serif;
     color: white;
@@ -428,9 +423,9 @@ body {
     flex-direction: column;
     align-items: center;
     height: 400px;
-    //align the text to the center
+
     text-align: center;
-  
+
     &__instructions {
       display: flex;
       flex-direction: column;
@@ -441,14 +436,13 @@ body {
       font-family: "Oxanium", sans-serif;
       color: white;
     }
-  
+
     &__buttons {
       background-color: white;
       padding: 10px;
-      // width:200px;
-      // height:100px;
+
       border-radius: 30px;
-  
+
       display: grid;
       height: 350px;
       width: 600px;
@@ -457,7 +451,7 @@ body {
       gap: 5px;
       box-shadow: #867e96 0px 0px 15px;
       padding-right: 10px;
-  
+
       #button1 {
         display: flex;
         justify-content: center;
@@ -469,7 +463,7 @@ body {
         width: 60px;
         margin: auto;
       }
-  
+
       #button2 {
         display: flex;
         justify-content: center;
@@ -480,7 +474,7 @@ body {
         height: 60px;
         width: 60px;
       }
-  
+
       #button3 {
         display: flex;
         justify-content: center;
@@ -491,7 +485,7 @@ body {
         height: 60px;
         width: 60px;
       }
-  
+
       #button4 {
         display: flex;
         justify-content: center;
@@ -502,7 +496,7 @@ body {
         height: 60px;
         width: 60px;
       }
-  
+
       #button5 {
         display: flex;
         justify-content: center;
@@ -512,10 +506,8 @@ body {
         border-radius: 50%;
         height: 60px;
         width: 60px;
-        
-        
       }
-  
+
       #button6 {
         display: flex;
         justify-content: center;
@@ -526,7 +518,7 @@ body {
         height: 60px;
         width: 60px;
       }
-  
+
       #button7 {
         display: flex;
         justify-content: center;
@@ -537,7 +529,7 @@ body {
         height: 60px;
         width: 60px;
       }
-  
+
       #button8 {
         display: flex;
         justify-content: center;
@@ -548,7 +540,7 @@ body {
         height: 60px;
         width: 60px;
       }
-  
+
       #button9 {
         display: flex;
         justify-content: center;
@@ -559,7 +551,7 @@ body {
         height: 60px;
         width: 60px;
       }
-  
+
       #button10 {
         display: flex;
         justify-content: center;
@@ -570,7 +562,7 @@ body {
         height: 60px;
         width: 60px;
       }
-  
+
       #button11 {
         display: flex;
         justify-content: center;
@@ -581,7 +573,7 @@ body {
         height: 60px;
         width: 60px;
       }
-  
+
       #button12 {
         display: flex;
         justify-content: center;
@@ -592,7 +584,7 @@ body {
         height: 60px;
         width: 60px;
       }
-  
+
       #button13 {
         display: flex;
         justify-content: center;
@@ -602,15 +594,10 @@ body {
         border-radius: 50%;
         height: 60px;
         width: 60px;
-       
       }
     }
   }
-
 }
-
-
-
 
 @media (min-width: 1024px) {
   #score-counter {
@@ -629,7 +616,7 @@ body {
     margin-left: 1vw;
     box-shadow: 0 0 20px #ac97e6;
   }
-  
+
   #current-level {
     display: flex;
     justify-content: end;
@@ -637,14 +624,14 @@ body {
     color: white;
     font-size: 20px;
   }
-  
+
   #header {
     display: flex;
     justify-content: center;
     font-family: "Oxanium", sans-serif;
     color: white;
   }
-  
+
   .color-matcher {
     display: flex;
     flex-direction: column;
@@ -654,7 +641,7 @@ body {
     font-family: "Oxanium", sans-serif;
     color: white;
     font-size: 20px;
-  
+
     &__color {
       border-radius: 50%;
       height: 100px;
@@ -662,11 +649,11 @@ body {
       border: none;
     }
   }
-  
+
   .user-input-output {
-    height: 100px; ;
+    height: 100px;
   }
-  
+
   .level-selectors {
     display: flex;
     align-items: center;
@@ -674,7 +661,7 @@ body {
     width: 100%;
     font-family: "Oxanium", sans-serif;
     color: white;
-  
+
     &__button {
       background-color: #6d5a8e;
       border-style: none;
@@ -691,9 +678,8 @@ body {
       font-family: "Oxanium", sans-serif;
       box-shadow: #7d7291 0px 0px 15px;
     }
-  
   }
-  
+
   .game-option-buttons {
     display: flex;
     flex-direction: column;
@@ -703,7 +689,7 @@ body {
     font-family: "Oxanium", sans-serif;
     color: white;
   }
-  
+
   #game-button {
     background-color: #6d5a8e;
     border-style: none;
@@ -715,13 +701,13 @@ body {
     height: 50px;
     width: 150px;
     margin-top: 20px;
-    //padding-top: px;
+
     color: white;
-    font-size:20px;
+    font-size: 20px;
     font-family: "Oxanium", sans-serif;
     box-shadow: #7d7291 0px 0px 15px;
   }
-  
+
   .user-selection {
     font-family: "Oxanium", sans-serif;
     color: white;
@@ -729,9 +715,9 @@ body {
     flex-direction: column;
     align-items: center;
     height: 550px;
-    //align the text to the center
+
     text-align: center;
-  
+
     &__instructions {
       display: flex;
       flex-direction: column;
@@ -742,13 +728,13 @@ body {
       font-family: "Oxanium", sans-serif;
       color: white;
     }
-  
+
     &__buttons {
       background-color: white;
       padding: 10px;
-      
+
       border-radius: 30px;
-  
+
       display: grid;
       height: 450px;
       width: 650px;
@@ -757,7 +743,7 @@ body {
       gap: 5px;
       box-shadow: #867e96 0px 0px 15px;
       padding-right: 10px;
-  
+
       #button1 {
         display: flex;
         justify-content: center;
@@ -769,7 +755,7 @@ body {
         width: 80px;
         margin: auto;
       }
-  
+
       #button2 {
         display: flex;
         justify-content: center;
@@ -780,7 +766,7 @@ body {
         height: 80px;
         width: 80px;
       }
-  
+
       #button3 {
         display: flex;
         justify-content: center;
@@ -791,7 +777,7 @@ body {
         height: 80px;
         width: 80px;
       }
-  
+
       #button4 {
         display: flex;
         justify-content: center;
@@ -802,7 +788,7 @@ body {
         height: 80px;
         width: 80px;
       }
-  
+
       #button5 {
         display: flex;
         justify-content: center;
@@ -812,10 +798,8 @@ body {
         border-radius: 50%;
         height: 80px;
         width: 80px;
-        
-        
       }
-  
+
       #button6 {
         display: flex;
         justify-content: center;
@@ -826,7 +810,7 @@ body {
         height: 80px;
         width: 80px;
       }
-  
+
       #button7 {
         display: flex;
         justify-content: center;
@@ -837,7 +821,7 @@ body {
         height: 80px;
         width: 80px;
       }
-  
+
       #button8 {
         display: flex;
         justify-content: center;
@@ -848,7 +832,7 @@ body {
         height: 80px;
         width: 80px;
       }
-  
+
       #button9 {
         display: flex;
         justify-content: center;
@@ -859,7 +843,7 @@ body {
         height: 80px;
         width: 80px;
       }
-  
+
       #button10 {
         display: flex;
         justify-content: center;
@@ -870,7 +854,7 @@ body {
         height: 80px;
         width: 80px;
       }
-  
+
       #button11 {
         display: flex;
         justify-content: center;
@@ -881,7 +865,7 @@ body {
         height: 80px;
         width: 80px;
       }
-  
+
       #button12 {
         display: flex;
         justify-content: center;
@@ -892,7 +876,7 @@ body {
         height: 80px;
         width: 80px;
       }
-  
+
       #button13 {
         display: flex;
         justify-content: center;
@@ -902,9 +886,7 @@ body {
         border-radius: 50%;
         height: 80px;
         width: 80px;
-       
       }
     }
   }
-
 }
